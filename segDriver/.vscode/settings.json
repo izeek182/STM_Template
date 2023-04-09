@@ -1,0 +1,18 @@
+{
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "c:\\Users\\izeek\\Desktop\\CS-5780\\Lab 2\\Lab 2\\build",
+            "binaryPath": "c:\\Users\\izeek\\Desktop\\CS-5780\\Lab 2\\Lab 2\\build\\Lab2.elf",
+            "binaryArgs": []
+        }
+    ],
+    "cSpell.words": [
+        "regen",
+        "Usart"
+    ],
+    "files.associations": {
+        "charbuffer.h": "c",
+        "stm32f0xx_hal.h": "c"
+    },
+    "cortex-debug.variableUseNaturalFormat": false
+}
