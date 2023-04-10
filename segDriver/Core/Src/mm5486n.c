@@ -5,6 +5,7 @@ uint16_t segVal = 0x1234;
 uint8_t place = 0; // Even Is clock high, odd is clk low. 
 // data is sent on low clock
 
+
 char segTable[16] = {
     0x3F, // 0
     0x06, // 1

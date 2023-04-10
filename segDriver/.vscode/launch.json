@@ -1,7 +1,6 @@
 // FILE:  ${workspaceRoot}/.vscode/launch.json
 {
     "configurations": [
-
         {
             "name": "Cortex Debug",
             "cwd": "${workspaceFolder}",
@@ -9,10 +8,37 @@
             "request": "launch",
             "type": "cortex-debug",
             "runToEntryPoint": "main",
-            "servertype": "stlink",
-            // "showDevDebugOutput": "raw",
-            // "serverpath" : "C:\\Program Files\\STMicroelectronics\\STM32CubeIDE_1.11.2\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.stlink-gdb-server.win32_2.0.400.202209281104\\tools\\bin\\ST-LINK_gdbserver.exe",
-            // "stm32cubeprogrammer" : "C:\\Program Files\\STMicroelectronics\\STM32CubeIDE_1.11.2\\STM32CubeIDE\\plugins\\com.st.stm32cube.ide.mcu.externaltools.cubeprogrammer.win32_2.0.500.202209151145\\tools\\bin"
+            "servertype": "stlink"
+        },
+        {
+            "showDevDebugOutput": "parsed",
+            "cwd": "${workspaceRoot}",
+            "executable": "./build/7seg.elf",
+            "name": "Debug STM32",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "preLaunchTask": "Build STM",
+            "device": "stm32f072xb.s",
+            "configFiles": [
+                "openocd.cfg"
+            ],
+            "svdFile": "STM32F072x.svd"
+        },
+        {
+            "showDevDebugOutput": "parsed",
+            "cwd": "${workspaceRoot}",
+            "executable": "./build/7seg.elf",
+            "name": "Attach STM32",
+            "request": "attach",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "preLaunchTask": "Build STM",
+            "device": "stm32f072xb.s",
+            "configFiles": [
+                "openocd.cfg"
+            ],
+            "svdFile": "STM32F072x.svd"
         }
     ]
  }
